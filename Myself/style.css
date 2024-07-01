@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIKSH.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* HEADER */
+        header {
+            height: 70px;
+            background-color: rgb(240, 195, 246);
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        header h2.logo {
+            font-size: 1.5rem;
+        }
+
+        header ul.links {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+        }
+
+        header ul.links li.active {
+            border-bottom: 1px solid black;
+        }
+
+        /* section home */
+        section#home {
+            height: calc(100vh - 70px);
+            width: 100vw;
+            background-image: url("./assets/bgg.jpeg");
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section#home p {
+            width: 60%;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        section#home h1 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        /* section projects */
+        section#projects {
+            padding: 25px;
+        }
+
+        section#projects h1 {
+            margin-bottom: 15px;
+        }
+
+        section#projects .projects_grid {
+            border: 1px solid black;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            gap: 20px;
+        }
+
+        .project_card {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .project_card img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width: 768px) {
+            section#projects .projects_grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div>
+            <h2 class="logo">DIKSH.</h2>
+        </div>
+
+        <ul class="links">
+            <li class="link">
+                <a href="./index.html">Home</a>
+            </li>
+            <li class="link">
+                <a href="./project.html">Projects</a>
+            </li>
+            <li class="link">
+                <a href="./about.html">About</a>
+            </li>
+            <li class="link active">
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <section id="home">
+        <h1>Welcome to DIKSH.</h1>
+        <p>This is a sample website. Feel free to explore!</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>Contact us:</p>
+            <ul>
+                <li>Email: contact@diksh.com</li>
+                <li>Phone: +1234567890</li>
+                <li>Address: 123 Main Street, City, Country</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 DIKSH. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
